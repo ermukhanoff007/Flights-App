@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                      // современный JS
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,                        // только TS
+    "skipLibCheck": true,
+    "esModuleInterop": true,                 // для import/export
+    "allowSyntheticDefaultImports": true,
+    "strict": true,                          // строгая типизация
+    "forceConsistentCasingInFileNames": true,
+
+    // 🚀 ВАЖНО: поддержка JSON
+    "resolveJsonModule": true,
+    
+    // пути (чтобы работал "@")
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"],
+      "shared/*": ["shared/*"]
+    },
+
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "isolatedModules": true,
+    "noEmit": true,                          // не генерировать js
+    "jsx": "react-jsx"                       // React 17+
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
