@@ -1,9 +1,11 @@
 import { flightsApi } from "@/features/flights/flightsApi";
 import { configureStore } from "@reduxjs/toolkit";
 import flightsReducer from "@/features/flights/flightSlice"
+import authReducer from "@/features/auth/authSlice"
 
 const store = configureStore({
     reducer:{
+        auth:authReducer,
         flights:flightsReducer,
         [flightsApi.reducerPath] : flightsApi.reducer
     },

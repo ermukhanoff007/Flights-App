@@ -6,6 +6,7 @@ import { CardComponent } from "@/components/CardComponent"
 import { selectFilteredFlights } from "@/features/flights/flightsSelector"
 import { useGetDictQuery } from "@/features/flights/flightsApi"
 import { useGetFlightsQuery } from "@/features/flights/flightsApi"
+import { redirect } from "react-router-dom" 
 
 export const MainPage: React.FC = () => {
     const filteredFlights = useSelector(selectFilteredFlights)
